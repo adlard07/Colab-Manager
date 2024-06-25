@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colab Notebook Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <h1>Your Colab Notebooks</h1>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="notebooks-container" class="notebcontainer">
+    </div>
+
+    <div id="notebooks-container"></div>
+        
+    <script src="scripts/auth.js">
+        document.addEventListener("DOMContentLoaded", () => {
+            const token = getTokenFromUrl();
+            if (token) {
+                saveTokenToLocalStorage(token);
+                removeTokenFromUrl();
+            removeTokenFromUrl();
+            console.log(localStorage.getItem('access_token'))
+        }
+    });
+    </script>
+</body>
+</html>
