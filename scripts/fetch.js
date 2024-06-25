@@ -53,3 +53,4 @@ function generateCards(notebooks) {
         container.appendChild(card);
     });
 }
+
